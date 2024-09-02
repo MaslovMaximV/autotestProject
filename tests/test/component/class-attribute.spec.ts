@@ -21,7 +21,5 @@ test.describe("Class attribute check", async () => {
 
     await openPage.dialogProccesimg(page)
     await openPage.searchAndClickNutton(page)
-
-    throw new Error("Button not found");
   });
 });

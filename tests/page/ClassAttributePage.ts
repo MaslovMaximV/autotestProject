@@ -2,12 +2,11 @@ import { test, expect } from "@playwright/test";
 import { ClassAttributeLocators } from "../locators/ClassAttributeLocators";
 
 export class ClassAttributePage extends ClassAttributeLocators{
-
     async dialogProccesimg(page){
         page.on("dialog", async (dialog) => {
           const textInDialog = dialog.message();
+          expect(textInDialog).toBe('Primary button pressed')
           await console.log('Текст в диалоге:', textInDialog); 
-          await expect(textInDialog).toBe("Primary button pressed");
           await dialog.accept();
           });
     }
