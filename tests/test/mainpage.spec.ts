@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { OMainPage } from '../openPage/OMainPage.';
+import { MainPageLocators } from '../locators/MainPageLocators';
 import { MainPage } from '../page/MainPage';
 
 test.beforeEach(async ({page}) => {
@@ -20,7 +20,7 @@ test.describe('home page entry', async () => {
 
   test('checking items for testing', async ({page}) =>{
     const mainPage = new MainPage(page)
-    const locator = new OMainPage(page)
+    const locator = new MainPageLocators(page)
     
     for (let index = 0; index < locator.elements.length; index++) {
       const element = locator.elements[index];

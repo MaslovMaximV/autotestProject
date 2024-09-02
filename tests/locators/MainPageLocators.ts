@@ -1,6 +1,7 @@
 import { Locator, Page } from "playwright"
 
-export class OMainPage {
+export class MainPageLocators
+ {
     private page: Page
     readonly elements: Locator[];
     readonly DYNAMIC_ID: Locator

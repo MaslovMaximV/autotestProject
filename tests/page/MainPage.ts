@@ -1,8 +1,8 @@
 import { expect } from "@playwright/test"
 import { Locator } from "playwright"
-import { OMainPage } from "../openPage/OMainPage.";
+import { MainPageLocators } from "../locators/MainPageLocators";
 
-export class MainPage extends OMainPage {
+export class MainPage extends  MainPageLocators{
     async assertElementVisibleAndEnabled(locator: Locator) {
         // Wait for the element to become visible
         await new Promise(resolve => setTimeout(resolve, 1000));
